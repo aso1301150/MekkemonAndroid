@@ -4,13 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="horizontal" >
 
-    <requestFocus />
+    <requestFocus
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFE599" >
 
+        //ろご
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="wrap_content"
@@ -19,49 +22,47 @@
             android:layout_alignParentRight="true"
             android:src="@drawable/logo" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout2"
+        //店名・ジャンル　テキスト
+        <EditText
+            android:id="@+id/editText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/linearLayout1"
+            android:layout_below="@+id/imageView7"
+            android:layout_marginTop="23dp"
+            android:layout_toLeftOf="@+id/button1"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="@string/hinttext"
+            android:textSize="13sp" />
+
+        //検索ボタン
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="70dip"
+            android:layout_height="30dip"
+            android:layout_alignBaseline="@+id/editText1"
+            android:layout_alignBottom="@+id/editText1"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/linearLayout1"
-            android:layout_marginTop="20dp"
-            android:layout_toRightOf="@+id/linearLayout3" >
+            android:singleLine="true"
+            android:text="@string/kensaku"
+            android:textSize="13sp" />
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="95dp"
-                android:layout_height="65dp"
-                android:src="@drawable/syasin" />
-
-            <Space android:layout_width="16dip" />
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="95dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/omise" />
-
-            <Space android:layout_width="16dip" />
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="95dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/oki" />
-        </LinearLayout>
+        //1段目
 
         <LinearLayout
             android:id="@+id/linearLayout1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
             android:layout_below="@+id/button1"
-            android:layout_marginTop="20dp" >
+            android:layout_marginTop="17dp"
+            android:layout_toLeftOf="@+id/jouken"
+            android:layout_toRightOf="@+id/tokushuu"
+            android:layout_centerHorizontal="true" >
 
             <ImageView
-                android:id="@+id/ImageView03"
+                android:id="@+id/jouken"
                 android:layout_width="95dp"
                 android:layout_height="65dp"
                 android:src="@drawable/jouken" />
@@ -81,39 +82,50 @@
                 android:layout_height="match_parent" />
 
             <ImageView
-                android:id="@+id/ImageView01"
+                android:id="@+id/tokushuu"
                 android:layout_width="95dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/toku" />
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/editText1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/linearLayout1"
-            android:layout_below="@+id/imageView7"
-            android:layout_marginTop="23dp"
-            android:layout_toLeftOf="@+id/button1"
-            android:background="#FFFFFF"
-            android:ems="10"
-            android:hint="@string/hinttext"
-            android:textSize="13sp" />
-
+        //2段目
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-        </LinearLayout>
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_marginTop="28dp"
+            android:layout_toLeftOf="@+id/shasin"
+            android:layout_toRightOf="@+id/oki"
+            android:layout_centerHorizontal="true" >
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="70dip"
-            android:layout_height="30dip"
-            android:layout_alignBaseline="@+id/editText1"
-            android:layout_alignBottom="@+id/editText1"
-            android:layout_alignParentRight="true"
-            android:text="検索"
-            android:textSize="13sp" />
+            <ImageView
+                android:id="@+id/shasin"
+                android:layout_width="95dp"
+                android:layout_height="65dp"
+                android:src="@drawable/syasin" />
+
+            <Space
+                android:layout_width="16dip"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/omise" />
+
+            <Space
+                android:layout_width="16dip"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/oki"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/oki" />
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/imageView1"
@@ -122,7 +134,9 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="14dp"
-            android:src="@drawable/meison" />
+            android:src="@drawable/meison"
+            />
+
 
     </RelativeLayout>
 
