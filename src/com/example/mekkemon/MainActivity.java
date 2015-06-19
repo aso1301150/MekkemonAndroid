@@ -28,6 +28,18 @@ public class MainActivity extends Activity {
 				startActivity(i);
 			}
 		});
+
+		ImageView picture2 = (ImageView)findViewById(R.id.imageView5);
+		picture2.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO 自動生成されたメソッド・スタブ
+				Intent i2 = new Intent(MainActivity.this,Misetuika.class);
+				startActivity(i2);
+
+			}
+		});
 	}
 
 
