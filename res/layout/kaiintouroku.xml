@@ -4,7 +4,9 @@
     android:layout_height="match_parent"
     android:orientation="horizontal" >
 
-    <requestFocus />
+    <requestFocus
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -33,7 +35,9 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/syasin" />
 
-            <Space android:layout_width="8dip" />
+            <Space
+                android:layout_width="8dip"
+                android:layout_height="wrap_content" />
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -41,7 +45,9 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/omise" />
 
-            <Space android:layout_width="8dip" />
+            <Space
+                android:layout_width="8dip"
+                android:layout_height="match_parent" />
 
             <ImageView
                 android:id="@+id/imageView6"

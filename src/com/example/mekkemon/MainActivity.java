@@ -2,17 +2,35 @@ package com.example.mekkemon;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);あ
+		setContentView(R.layout.kaiintouroku);
+		//Viewの取得
+		ImageView picture = (ImageView)findViewById(R.id.ImageView02);
+		//ボタンがタップされたら
+		picture.setOnClickListener(new View.OnClickListener() {
+
+			//タップされたら指定した画面に遷移する
+			@Override
+			public void onClick(View v) {
+				// TODO 自動生成されたメソッド・スタブ
+				Intent i = new Intent(MainActivity.this,Map.class);
+				startActivity(i);
+			}
+		});
 	}
+
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -32,4 +50,5 @@ public class MainActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
 }
