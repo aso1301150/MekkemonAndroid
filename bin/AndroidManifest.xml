@@ -29,6 +29,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Map" android:label="@string/app_name"></activity>
-        <activity android:name=".Misetuika" android:label="@string/app_name"></activity></application>
+        <activity android:name=".Misetuika" android:label="@string/app_name"></activity>
+        <activity android:name=".Shasin" android:label="@string/app_name"></activity></application>
 
 </manifest>

@@ -29,15 +29,25 @@ public class MainActivity extends Activity {
 			}
 		});
 
+		//お店の追加
 		ImageView picture2 = (ImageView)findViewById(R.id.imageView5);
 		picture2.setOnClickListener(new View.OnClickListener() {
-
 			@Override
 			public void onClick(View v) {
 				// TODO 自動生成されたメソッド・スタブ
 				Intent i2 = new Intent(MainActivity.this,Misetuika.class);
 				startActivity(i2);
+			}
+		});
 
+		//写真検索
+		ImageView picture3 = (ImageView)findViewById(R.id.imageView4);
+		picture3.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO 自動生成されたメソッド・スタブ
+				Intent i3 = new Intent(MainActivity.this,Shasin.class);
+				startActivity(i3);
 			}
 		});
 	}
