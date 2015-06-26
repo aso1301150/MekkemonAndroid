@@ -30,15 +30,10 @@ public class DBManager extends SQLiteOpenHelper {
 		// TODO 自動生成されたメソッド・スタブ
 		db.execSQL("CREATE TABLE IF NOT EXISTS "+
 		"mise(shopid INTEGER PRIMARY KEY AUTOINCREMENT,shopname TEXT,photo BLOB,janruid INTEGER,price INTEGER,comment TEXT)");
-	}
-
-	public void onCreate1(SQLiteDatabase db) {
-		// TODO 自動生成されたメソッド・スタブ
 		db.execSQL("CREATE TABLE IF NOT EXISTS "+
 				"ichi(shopid INTEGER PRIMARY KEY AUTOINCREMENT,zx INTEGER,zy INTEGER)");
+
 	}
-
-
 	/* (非 Javadoc)
 	 * @see android.database.sqlite.SQLiteOpenHelper#onUpgrade(android.database.sqlite.SQLiteDatabase, int, int)
 	 */
