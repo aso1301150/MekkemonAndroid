@@ -50,6 +50,17 @@ public class MainActivity extends Activity {
 				startActivity(i3);
 			}
 		});
+
+		//お気に入り
+				ImageView picture4 = (ImageView)findViewById(R.id.imageView6);
+				picture4.setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						// TODO 自動生成されたメソッド・スタブ
+						Intent i4 = new Intent(MainActivity.this,.class);
+						startActivity(i4);
+					}
+				});
 	}
 
 
